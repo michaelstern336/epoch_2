@@ -1,0 +1,5 @@
+from urllib.request import urlopen
+file = urlopen('https://raw.githubusercontent.com/bucharestschoolofai/epoch_2/master/dataset_Facebook.csv')
+data = pd.read_csv(file, delimiter=';', usecols=['Total Interactions', 'Post Month', 'Post Weekday', 'Post Hour', 'Page total likes'])
+
+data.head(5)
